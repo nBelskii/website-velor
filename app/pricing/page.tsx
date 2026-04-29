@@ -1,0 +1,3 @@
+import { PricingCard, SectionHeader } from '@/components/ui'; import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('Pricing | Velora','Flexible engagement models starting from your needs.','/pricing');
+export default function Page(){return <main className='section container-wrap'><SectionHeader title='Pricing' sub='No fixed pricing. Scopes are tailored to goals and complexity.'/><div className='grid gap-5 md:grid-cols-3'><PricingCard title='Starter Build' text='Starting from a focused MVP delivery.'/><PricingCard title='Growth System' text='Starting from multi-workflow business systems.'/><PricingCard title='Custom Platform' text='Starting from enterprise-grade platform architecture.'/></div></main>}

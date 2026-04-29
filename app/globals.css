@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-brand-lightBg text-slate-800 dark:bg-brand-darkBg dark:text-slate-100 antialiased;
+}
+
+.container-wrap { @apply mx-auto max-w-7xl px-6 lg:px-8; }
+.card { @apply rounded-2xl border border-slate-200/70 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-brand-darkCard/90; }
+.section { @apply py-20 md:py-28; }

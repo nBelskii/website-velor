@@ -1,0 +1,3 @@
+import { FeatureCard, SectionHeader } from '@/components/ui'; import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('Services | Velora','Custom software and SaaS development services.','/services');
+export default function Page(){const items=['Custom web apps','SaaS product development','CRM systems','Business automation','AI-powered workflows','Client portals','Dashboards and reporting','API integrations']; return <main className='section container-wrap'><SectionHeader title='Services' sub='Execution-focused software delivery for modern businesses.'/><div className='grid gap-5 md:grid-cols-2'>{items.map(i=><FeatureCard key={i} title={i} text='Built to streamline operations and unlock growth.'/>)}</div></main>}
