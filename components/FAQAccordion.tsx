@@ -1,0 +1,2 @@
+const faqs=[['How fast can we launch?','Most MVPs launch in 8–14 weeks depending on scope.'],['Do you replace our existing tools?','We integrate with tools you rely on and replace only where needed.'],['Do you support after launch?','Yes, with iterative roadmap, support, and optimization.']];
+export function FAQAccordion(){return <div className="space-y-3">{faqs.map(([q,a])=><details key={q} className="card"><summary className="cursor-pointer font-medium">{q}</summary><p className="mt-3 text-slate-600 dark:text-slate-300">{a}</p></details>)}</div>}

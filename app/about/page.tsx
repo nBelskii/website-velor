@@ -1,0 +1,3 @@
+import { SectionHeader } from '@/components/ui'; import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('About | Velora','Velora is a founder-led modern software company.','/about');
+export default function Page(){return <main className='section container-wrap'><SectionHeader title='About Velora' sub='A modern software company building practical tools for real business problems.'/><div className='card max-w-4xl space-y-4'><p>Velora helps small and medium businesses modernize operations with custom web apps, SaaS platforms, CRM systems, and automation tools.</p><p>Our founder-led product mindset keeps every roadmap grounded in measurable business outcomes.</p></div></main>}
