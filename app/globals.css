@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html.dark { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-brand-lightBg text-slate-800 dark:bg-brand-darkBg dark:text-slate-100 antialiased;
+  background-image: radial-gradient(circle at 20% 0%, rgba(16,185,129,0.08), transparent 28%), radial-gradient(circle at 80% 0%, rgba(20,184,166,0.08), transparent 24%);
+}
+
+.container-wrap { @apply mx-auto max-w-7xl px-6 lg:px-8; }
+.section { @apply py-20 md:py-28; }
+
+.display-gradient {
+  @apply font-semibold tracking-tight;
+  background: linear-gradient(110deg, #0f172a 5%, #10b981 45%, #14b8a6 70%, #0f172a 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .display-gradient {
+  background: linear-gradient(110deg, #ecfeff 5%, #6ee7b7 45%, #67e8f9 70%, #ecfeff 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-brand-darkCard/90;
+}
+
+.glass { @apply border border-white/20 bg-white/60 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40; }
+.grid-lines {
+  background-image: linear-gradient(to right, rgba(148,163,184,.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes pulse-glow { 0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.35)} 50%{box-shadow:0 0 0 10px rgba(16,185,129,0)} }
+@keyframes shine { from{background-position:200% center} to{background-position:-200% center} }
+
+.float-anim { animation: float 6s ease-in-out infinite; }
+.glow-pulse { animation: pulse-glow 2.5s ease-in-out infinite; }
+.btn-shine { background-image: linear-gradient(120deg, rgba(255,255,255,.15) 20%, rgba(255,255,255,.35) 40%, rgba(255,255,255,.15) 60%); background-size: 250% auto; animation: shine 4s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .float-anim,.glow-pulse,.btn-shine { animation: none; }
+}
