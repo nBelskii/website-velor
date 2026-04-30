@@ -1,0 +1,3 @@
+import { ContactForm } from '@/components/ContactForm'; import { SectionHeader } from '@/components/ui'; import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('Contact | Velora','Book a demo to discuss your custom software goals.','/contact');
+export default function Page(){return <main className='section container-wrap'><SectionHeader title='Book a strategy call' sub='Tell us what you want to build and we will map the fastest execution path.'/><p className='mb-8 max-w-3xl text-slate-600 dark:text-slate-300'>Need custom software development, SaaS development, or apps for field service companies? Velora can scope an affordable build plan in one conversation.</p><ContactForm/></main>}

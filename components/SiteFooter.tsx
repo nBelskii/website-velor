@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export function SiteFooter(){return <footer className="border-t border-slate-200 py-10 dark:border-slate-800"><div className="container-wrap flex flex-col justify-between gap-6 md:flex-row"><p className="text-sm text-slate-500">© {new Date().getFullYear()} Velora. Software systems built for modern businesses.</p><div className="flex gap-4 text-sm"><Link href="/legal/privacy">Privacy</Link><Link href="/legal/terms">Terms</Link></div></div></footer>}
