@@ -1,8 +1,7 @@
 export const site = {
-  name: 'Velora',
-  url: 'https://www.velora.software',
-  description:
-    'Velora builds custom software, SaaS platforms, CRM systems, dashboards, and automation tools for modern businesses.'
+  name: 'Northfield',
+  url: 'https://www.northfield.software',
+  description: 'Northfield builds premium Website-as-a-Service systems and custom software products for modern service businesses.'
 };
 
 export const nav = [
